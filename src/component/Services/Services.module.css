@@ -1,0 +1,137 @@
+.serviceSection {
+  width: 1000px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: auto;
+  position: relative;
+  box-shadow: 0 0 10px 2px #e3dcdc;
+  margin-bottom: 10px;
+  border-radius: 10px;
+}
+.serviceSection .text {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-weight: 700;
+  font-size: 2rem;
+  color: var(--text-color);
+  padding: 10px;
+  margin-bottom: 20px;
+}
+.serviceSection .text .style {
+  color: var(--main-color);
+}
+.serviceSection .flexs {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 30px;
+  margin-bottom: 20px;
+}
+.serviceSection .flexs .service {
+  width: 300px;
+  height: 300px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  background-color: var(--second-bg-color);
+  box-shadow: 0 0 10px 2px #e3dcdc;
+  border-radius: 10px;
+  transition: 0.5s;
+}
+.serviceSection .flexs .service:hover {
+  transition: 0.5s;
+  border: 1px solid var(--main-color);
+  scale: 1.1;
+}
+.serviceSection .flexs .service .svg {
+  width: 70px;
+  padding: 5px;
+}
+.serviceSection .flexs .service .name {
+  font-weight: 700;
+  font-size: 1.2rem;
+  color: var(--text-color);
+}
+.serviceSection .flexs .service .read {
+  width: 90%;
+  text-align: center;
+  display: flex;
+  color: var(--text-color);
+  padding: 5px;
+  max-height: 95px;
+  overflow: hidden;
+}
+.serviceSection .flexs .service .btn {
+  width: 100px;
+  padding: 5px;
+  border: none;
+  border-radius: 5px;
+  background-color: var(--main-color);
+  margin: 5px;
+  box-shadow: 0 0 5px 2px #e3dcdc;
+}
+@media only screen and (max-width: 1050px) {
+  .serviceSection {
+    width: 700px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+    min-height: 100vh;
+    position: relative;
+  }
+  .serviceSection .flexs {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 40px;
+  }
+}
+@media only screen and (max-width: 750px) {
+  .serviceSection {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+    min-height: 100vh;
+    position: relative;
+  }
+  .serviceSection .flexs {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+  }
+}
+.nav .leftRight,
+.home .homeLeft .leftRight,
+.home .homeRight .leftRight,
+.about .aboutLeft .leftRight,
+.about .aboutRight .leftRight,
+.serviceSection .flexs .service .leftRight,
+.contact .form .input .leftRight {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  right: 0;
+  background-color: var(--bg-color);
+  z-index: 110;
+  animation: rightLeft 1s ease forwards;
+  animation-delay: calc(var(--i) * 0.3s);
+}
+@keyframes rightLeft {
+  100% {
+    width: 0px;
+  }
+}

@@ -1,0 +1,158 @@
+.nav {
+  width: 100%;
+  height: 60px;
+  background-color: var(--bg-color);
+  display: flex;
+  align-items: flex-start;
+  position: fixed;
+  top: 0;
+  z-index: 100;
+  border-radius: 10px;
+  box-shadow: 0 0 10px 2px #e3dcdc;
+}
+.nav .navLeft {
+  width: 30%;
+  line-height: 60px;
+  font-size: 1.4rem;
+  color: var(--text-color);
+  padding: 0 40px;
+  display: flex;
+  align-items: center;
+}
+.nav .navRight {
+  width: 70%;
+}
+.nav .navRight .barImg {
+  display: none;
+}
+.nav .navRight ul {
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10%;
+  margin-top: 10px;
+}
+.nav .navRight ul a li {
+  padding: 10px;
+  list-style: none;
+  cursor: pointer;
+  font-weight: bold;
+}
+.nav .navRight ul a {
+  text-decoration: none;
+  color: var(--text-color);
+  font-size: 1.1rem;
+}
+.nav .navRight ul a.active li {
+  color: var(--main-color);
+}
+.nav .navRight ul a:hover li {
+  color: var(--main-color);
+}
+.nav .navRight .king {
+  left: 0;
+  transition: 0.5s;
+}
+.nav .navRight ul .animate {
+  display: none;
+}
+@media only screen and (max-width: 1000px) {
+  .nav .navRight {
+    height: 60px;
+    display: flex;
+    align-items: center;
+  }
+  .nav .navRight .barImg {
+    display: block;
+    padding: 10px;
+    position: absolute;
+    right: 20px;
+  }
+  .nav .navRight .barImg img {
+    width: 40px;
+    height: 40px;
+  }
+  .nav .navRight ul {
+    position: absolute;
+    width: 100%;
+    height: 250px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background-color: rgb(245, 215, 219);
+    gap: 10px;
+    left: -100%;
+    top: 100%;
+    /*transform: translateX(-100%);*/
+
+    transition: 0.5s ease;
+    transition-delay: 0.25s;
+    z-index: 1;
+  }
+  .nav .navRight ul.slide {
+    left: 0%;
+  }
+  .nav .navRight ul .style {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    left: -100%;
+    background-color: #d7f5dc;
+    transition: 0.5s ease;
+    z-index: -1;
+  }
+  .nav .navRight ul.slide .style {
+    left: 0%;
+    transition-delay: 0.5s;
+  }
+  .nav .navRight ul a li {
+    width: 100%;
+    transition: 1s;
+    font-weight: bold;
+  }
+  .nav .navRight .king a li {
+    transform: translateX(50%);
+  }
+  .nav .navRight .king {
+    transition: 0.5s;
+  }
+  .nav .navRight ul .animate {
+    display: block;
+    position: absolute;
+    width: 100%;
+    height: 250px;
+    background-color: var(--bg-color);
+    left: -100%;
+    transition: 0.5s;
+    z-index: -1;
+    transition-delay: 0.25s;
+  }
+
+  .nav .navRight .king .animate {
+    left: 0;
+    z-index: -1;
+  }
+}
+.nav .leftRight,
+.home .homeLeft .leftRight,
+.home .homeRight .leftRight,
+.about .aboutLeft .leftRight,
+.about .aboutRight .leftRight,
+.serviceSection .flexs .service .leftRight,
+.contact .form .input .leftRight {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  right: 0;
+  background-color: var(--bg-color);
+  z-index: 110;
+  animation: rightLeft 1s ease forwards;
+  animation-delay: calc(var(--i) * 0.3s);
+}
+@keyframes rightLeft {
+  100% {
+    width: 0px;
+  }
+}

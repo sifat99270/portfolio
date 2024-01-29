@@ -1,0 +1,130 @@
+.contact {
+  width: 1000px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  margin: 60px auto;
+  border-radius: 10px;
+  box-shadow: 0 0 10px 2px #e3dcdc;
+}
+.contact .text {
+  color: var(--text-color);
+  padding: 10px;
+  font-size: 2rem;
+}
+.contact .text .style {
+  color: var(--main-color);
+}
+.contact .form {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 20px;
+  position: relative;
+  padding: 10px;
+}
+.contact .form .input {
+  width: 45%;
+  position: relative;
+}
+.contact .form .input input {
+  width: 100%;
+  height: 50px;
+  outline: none;
+  border: 1px solid var(--main-color);
+  background-color: var(--bg-color);
+  border-radius: 10px;
+  padding: 10px;
+  color: var(--text-color);
+  font-weight: bold;
+  position: relative;
+}
+.contact .form .message input {
+  min-height: 150px;
+}
+.contact .form .input input:valid,
+.contact .form .input input:focus {
+  border: 1px solid magenta;
+}
+.contact .form .input .animate {
+  position: absolute;
+  left: 20px;
+  height: 15px;
+  line-height: 15px;
+  top: 25%;
+  font-weight: 700;
+  color: var(--text-color);
+  background-color: var(--bg-color);
+  transition: 0.5s;
+  pointer-events: none;
+}
+.contact .form .input input:focus ~ .animate,
+.contact .form .input input:valid ~ .animate {
+  top: -9px;
+}
+.contact .form .buttonDiv {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 20px;
+}
+.contact .form .buttonDiv .button {
+  width: 150px;
+  padding: 10px;
+  border-radius: 10px;
+  background-color: var(--main-color);
+  border: none;
+  box-shadow: 0 0 5px 2px var(--main-color);
+  bottom: 0px;
+  font-weight: bold;
+  color: var(--text-color);
+}
+@media only screen and (max-width: 1050px) {
+  .contact {
+    width: 700px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin: 60px auto;
+  }
+}
+@media only screen and (max-width: 750px) {
+  .contact {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin: 60px auto;
+  }
+  .contact .form .input {
+    width: 90%;
+    position: relative;
+  }
+}
+.nav .leftRight,
+.home .homeLeft .leftRight,
+.home .homeRight .leftRight,
+.about .aboutLeft .leftRight,
+.about .aboutRight .leftRight,
+.serviceSection .flexs .service .leftRight,
+.contact .form .input .leftRight {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  right: 0;
+  background-color: var(--bg-color);
+  z-index: 110;
+  animation: rightLeft 1s ease forwards;
+  animation-delay: calc(var(--i) * 0.3s);
+}
+@keyframes rightLeft {
+  100% {
+    width: 0;
+  }
+}

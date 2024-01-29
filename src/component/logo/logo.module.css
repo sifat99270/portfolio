@@ -1,0 +1,23 @@
+.main {
+  display: flex;
+}
+.main .one,
+.main .two,
+.main .three {
+  position: relative;
+  height: 50px;
+  font-size: 50px;
+  font-weight: 900;
+}
+.main .one hr,
+.main .two hr,
+.main .three hr {
+  width: 2px;
+  position: absolute;
+  height: 50px;
+  background-color: #fff;
+  top: 0;
+  left: 40%;
+  outline: none;
+  border: none;
+}
