@@ -15,7 +15,7 @@ const Homes = () => {
           </div>
           <p className={classes.h1}>
             <span className={classes.black}>
-              HY! I &apos M<span className={classes.color}>RA SIFAT</span>
+              HY! I&apos;M<span className={classes.color}> RA SIFAT</span>
             </span>
           </p>
           <p className={classes.h6}>javascript devloper</p>
@@ -44,7 +44,7 @@ const Homes = () => {
       </div>
       <div className={classes.all}>
         <div className={classes.text}>
-          <p className={classes.h6}>Hi! There i&aposm</p>
+          <p className={classes.h6}>Hi! There i&lsquo;m</p>
           <p className={classes.h1}>
             PROFESSIONAL <span className="color">FRONT-END</span>
             <br /> WEBDEVLOPER
@@ -63,17 +63,17 @@ const Homes = () => {
         </div>
         <div className={classes.project}>
           <div className={classes.img}>
-            <img src="node.svg" />
-            <img src="node.svg" />
+            <img src="node.svg" alt="img" />
+            <img src="node.svg" alt="img" />
           </div>
           <p className={classes.h6}>Showcase View</p>
           <p className={classes.h1}>PROJECTS</p>
         </div>
         <div className={classes.service}>
           <div className={classes.img}>
-            <img src="node.svg" />
-            <img src="react.svg" />
-            <img src="next.svg" />
+            <img src="node.svg" alt="img" />
+            <img src="react.svg" alt="img" />
+            <img src="next.svg" alt="img" />
           </div>
           <p className={classes.h6}>Specialization</p>
           <p className={classes.h1}>SERVICES OFFER</p>
@@ -84,7 +84,7 @@ const Homes = () => {
             <p className={classes.h6}>BLOG</p>
           </div>
           <div className={classes.contact}>
-            <p className={classes.h1}>Let's Work</p>
+            <p className={classes.h1}>Let&apos;s Work</p>
             <p className={classes.h6}>CONTACT</p>
           </div>
         </div>
