@@ -1,0 +1,144 @@
+.main {
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  grid-template-rows: repeat(9, 70px);
+  grid-gap: 20px;
+}
+.main .animation::before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, #eeeeee, #f9f9f9, #eeeeee);
+  left: 0;
+  top: 0;
+  border-radius: 10px;
+  animation: animate 1s infinite reverse;
+  background-size: 200%;
+}
+@keyframes animate {
+  0% {
+    background-position: -100% 0;
+  }
+  100% {
+    background-position: 100% 0;
+  }
+}
+.main .animation {
+  position: relative;
+}
+.main .one {
+  background-color: #ffffff;
+  box-shadow: 0 0 10px 2px #e3dcdc;
+  grid-column: 1/-1;
+  grid-row: 1 / span 3;
+  border-radius: 10px;
+}
+.main .two {
+  background-color: #ffffff;
+  box-shadow: 0 0 10px 2px #e3dcdc;
+  grid-column: 1 / span 4;
+  grid-row: 4 / span 3;
+  border-radius: 10px;
+}
+.main .three {
+  background-color: #ffffff;
+  box-shadow: 0 0 10px 2px #e3dcdc;
+  grid-column: 5/-1;
+  grid-row: 4 / span 4;
+  border-radius: 10px;
+}
+.main .four {
+  background-color: #ffffff;
+  box-shadow: 0 0 10px 2px #e3dcdc;
+  grid-column: 1/5;
+  grid-row: span 2;
+  border-radius: 10px;
+}
+.main .five {
+  background-color: #ffffff;
+  box-shadow: 0 0 10px 2px #e3dcdc;
+  grid-column: 5/-1;
+  grid-row: 8 / span 2;
+  border-radius: 10px;
+}
+.main div .div {
+  width: 90%;
+  height: 40%;
+  background-color: #e3dcdc;
+  position: absolute;
+  top: 5%;
+  border-radius: 10px;
+  left: 5%;
+  box-shadow: 0 0 10px 2px #ffffff;
+}
+.main div .div2 {
+  width: 90%;
+  height: 40%;
+  background-color: #e3dcdc;
+  position: absolute;
+  top: 55%;
+  border-radius: 10px;
+  box-shadow: 0 0 10px 2px #ffffff;
+  left: 5%;
+}
+.main .ani::before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, #ebf0ee, #f2e1e5, #ebf0ee);
+  left: 0;
+  top: 0;
+  border-radius: 10px;
+  animation: ani 1s infinite reverse;
+  background-size: 200%;
+}
+@keyframes ani {
+  0% {
+    background-position: -100% 0;
+  }
+  100% {
+    background-position: 100% 0;
+  }
+}
+@media only screen and (max-width: 650px) {
+  .main {
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    grid-template-rows: repeat(16, 70px);
+    grid-gap: 20px;
+  }
+  .main .one {
+    background-color: #ffffff;
+    box-shadow: 0 0 10px 2px #e3dcdc;
+    grid-column: 1/-1;
+    grid-row: 1 / span 4;
+  }
+  .main .two {
+    background-color: #ffffff;
+    box-shadow: 0 0 10px 2px #e3dcdc;
+    grid-column: 1/-1;
+    grid-row: 5 / span 3;
+  }
+  .main .three {
+    background-color: #ffffff;
+    box-shadow: 0 0 10px 2px #e3dcdc;
+    grid-column: 1/-1;
+    grid-row: 8 / span 4;
+  }
+  .main .four {
+    background-color: #ffffff;
+    box-shadow: 0 0 10px 2px #e3dcdc;
+    grid-column: 1/-1;
+    grid-row: 12 / span 2;
+  }
+  .main .five {
+    background-color: #ffffff;
+    box-shadow: 0 0 10px 2px #e3dcdc;
+    grid-column: 1/-1;
+    grid-row: 14 / span 2;
+  }
+}

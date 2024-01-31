@@ -1,0 +1,51 @@
+.buttonDiv {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.buttonDiv .main {
+  background-color: var(--main-color);
+  width: 150px;
+  padding: 2px;
+  border-radius: 10px;
+  border: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.buttonDiv .main .animate {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background-color: #ffffff;
+  position: relative;
+  animation: ami 1s linear infinite;
+}
+@keyframes ami {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+.buttonDiv .main .animate .abs {
+  position: absolute;
+  width: 90%;
+  height: 90%;
+  background-color: var(--main-color);
+  border-radius: 50%;
+  left: 0;
+  top: 0;
+  inset: 2px;
+}
+.buttonDiv .main .animate .abs::before {
+  content: "";
+  position: absolute;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  left: 0;
+  background-color: var(--main-color);
+}

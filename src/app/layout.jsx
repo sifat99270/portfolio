@@ -1,13 +1,8 @@
 import { Inter } from "next/font/google";
 import "./globals.css";
-import Navbar from "@/component/Navbar/Navbar";
-import About from "@/component/About/About";
-import Services from "@/component/Services/Services";
-import Skills from "@/component/Skills/Skills";
-import From from "@/component/Form/From";
-import Homes from "@/component/Home/home";
 
 import "bootstrap-icons/font/bootstrap-icons.css";
+import { Toaster } from "react-hot-toast";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -20,12 +15,8 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <body className={inter.className}>
-        <Navbar />
+        <Toaster />
         {children}
-        <About />
-        <Services />
-        <Skills />
-        <From />
       </body>
     </html>
   );

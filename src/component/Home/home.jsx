@@ -18,22 +18,22 @@ const Homes = () => {
               HY! I&apos;M<span className={classes.color}> RA SIFAT</span>
             </span>
           </p>
-          <p className={classes.h6}>javascript devloper</p>
+          <p className={classes.h6}>javascript developer</p>
           <p className={classes.email}>rasifat33@gmail.com</p>
-          <p className={classes.number}>+8800009888</p>
+          <p className={classes.number}>+8801328173616</p>
           <div className={classes.icon}>
             <a href="#">
-              <i class="bi bi-facebook"></i>
+              <i className="bi bi-facebook"></i>
             </a>
             <a href="#">
               {" "}
-              <i class="bi bi-twitter"></i>
+              <i className="bi bi-twitter"></i>
             </a>
             <a href="#">
-              <i class="bi bi-instagram"></i>
+              <i className="bi bi-instagram"></i>
             </a>
             <a href="#">
-              <i class="bi bi-linkedin"></i>
+              <i className="bi bi-linkedin"></i>
             </a>
           </div>
         </div>
@@ -46,14 +46,11 @@ const Homes = () => {
         <div className={classes.text}>
           <p className={classes.h6}>Hi! There i&lsquo;m</p>
           <p className={classes.h1}>
-            PROFESSIONAL <span className="color">FRONT-END</span>
-            <br /> WEBDEVLOPER
+            PROFESSIONAL <span className="color">FRONT-END AND BACKEND</span>
+            <br /> WEBDEVELOPER
           </p>
           <p className={classes.texth1}>
-            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Temporibus
-            quae eveniet ut, officiis ex tempore quaerat, dolorem iure iste
-            ratione illum dolores delectus unde architecto sunt libero aliquam
-            accusantium magni optio nisi repellat.
+            I pride myself on my ability to create seamless user experiences while ensuring the functionality and performance of the underlying systems. I excel at translating design concepts into responsive and interactive interfaces, utilizing the latest web technologies and frameworks to deliver intuitive and visually appealing websites and web applications. My attention to detail, problem-solving skills, and dedication to staying updated with industry trends allow me to deliver high-quality solutions that meet both user needs and business objectives. I thrive in collaborative environments, where I can contribute my expertise to create innovative digital experiences that make a meaningful impact.
           </p>
         </div>
         <div className={classes.about}>
@@ -63,8 +60,8 @@ const Homes = () => {
         </div>
         <div className={classes.project}>
           <div className={classes.img}>
-            <img src="node.svg" alt="img" />
-            <img src="node.svg" alt="img" />
+            <img src="/project1.png" alt="img" />
+            <img src="/project2.png" alt="img" />
           </div>
           <p className={classes.h6}>Showcase View</p>
           <p className={classes.h1}>PROJECTS</p>
@@ -85,7 +82,7 @@ const Homes = () => {
           </div>
           <div className={classes.contact}>
             <p className={classes.h1}>Let&apos;s Work</p>
-            <p className={classes.h6}>CONTACT</p>
+            <a href="#contact"><p className={classes.h6}>CONTACT</p></a>
           </div>
         </div>
       </div>

@@ -1,5 +1,6 @@
 .main {
   display: flex;
+  background-color: transparent;
 }
 .main .one,
 .main .two,
@@ -7,7 +8,7 @@
   position: relative;
   height: 50px;
   font-size: 50px;
-  font-weight: 900;
+  font-weight: 1000;
 }
 .main .one hr,
 .main .two hr,
@@ -15,7 +16,7 @@
   width: 2px;
   position: absolute;
   height: 50px;
-  background-color: #fff;
+  background-color: #ffffff;
   top: 0;
   left: 40%;
   outline: none;

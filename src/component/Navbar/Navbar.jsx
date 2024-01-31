@@ -3,12 +3,14 @@
 import { useEffect, useRef } from "react";
 import classes from "./Navbar.module.css";
 import Logo from "../logo/logo";
+import { usePathname } from "next/navigation";
 
-const Navbar = () => {
+const Navbar = ({ index }) => {
   const navRef = useRef();
 
   const imgRef = useRef();
   useEffect(() => { }, [navRef]);
+  const path = usePathname();
 
   function navslide() {
     navRef.current.classList.toggle(`${classes.slide}`);
@@ -30,27 +32,27 @@ const Navbar = () => {
         </div>
         <ul ref={navRef}>
           <div className={classes.style}></div>
-          <a href="#home" className={`${classes.active}`}>
+          <a href="#home" className={index === 0 ? `${classes.active}` : ''}>
             <li >
               HOME
             </li>
           </a>
-          <a href="#about">
+          <a href="#about" className={index === 1 ? `${classes.active}` : ''}>
             <li className={classes.active}>
               ABOUT
             </li>
           </a>
-          <a href="#service">
+          <a href="#service" className={index === 2 ? `${classes.active}` : ''}>
             <li className={classes.active}>
               SERVICES
             </li>
           </a>
-          <a href="#skill">
+          <a href="#skill" className={index === 3 ? `${classes.active}` : ''}>
             <li className={classes.active}>
               SKILLS
             </li>
           </a>
-          <a href="#contact">
+          <a href="#contact" className={index === 4 ? `${classes.active}` : ''}>
             <li className={classes.active}>
               CONTACT
             </li>

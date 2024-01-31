@@ -20,6 +20,7 @@
   border-radius: 50%;
   position: relative;
   z-index: 1;
+  margin-bottom: 15px;
 }
 .about .aboutLeft .circle {
   position: absolute;
@@ -73,6 +74,10 @@
 .about .aboutRight .h6 {
   color: var(--text-color);
   padding: 5px;
+  max-height: 150px;
+  overflow: hidden;
+  margin-bottom: 10px;
+  transition: 1s;
 }
 .about .aboutRight .read {
   margin-top: 10px;
@@ -84,6 +89,10 @@
   box-shadow: 0 0 5px 2px var(--main-color);
   font-weight: bold;
   color: var(--text-color);
+  cursor: pointer;
+}
+.about .aboutRight .height {
+  max-height: 600px;
 }
 @media only screen and (max-width: 1050px) {
   .about {
@@ -104,6 +113,9 @@
   .about .aboutRight .h6 {
     width: 70%;
     text-align: center;
+    max-height: 150px;
+    overflow: hidden;
+    margin-bottom: 10px;
   }
 }
 @media only screen and (max-width: 750px) {
@@ -114,6 +126,7 @@
     align-items: center;
     margin: auto;
     position: relative;
+    padding: 10px;
   }
   .about .aboutRight {
     width: 100%;
@@ -130,7 +143,13 @@
   }
   .about .aboutRight .h6 {
     width: 90%;
-    text-align: center;
+    text-align: left;
+    max-height: 150px;
+    overflow: hidden;
+    margin-bottom: 10px;
+  }
+  .about .aboutRight .height {
+    max-height: 600px;
   }
 }
 .nav .leftRight,
