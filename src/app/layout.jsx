@@ -9,7 +9,7 @@ const inter = Inter({ subsets: ["latin"] });
 export async function generateMetadata() {
 
   return {
-    metadataBase: new URL(process.env.BASE_URL),
+    metadataBase: new URL(process.env.HOST),
     title: "sifat",
     description: 'some des',
     keywords: ' \sifat, rasifat, smn, portfolio, me, i, king, ras, website, portfolio website,',
