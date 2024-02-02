@@ -515,6 +515,13 @@
     display: flex;
     justify-content: space-evenly;
   }
+  .homeSection .all .blogBox .contact a .h6 {
+    font-weight: bold;
+    font-size: 1.2rem;
+    letter-spacing: 2px;
+    padding: 5px 0;
+    margin: 0 0 3px 10px;
+  }
   .homeSection .my .divide {
     display: flex;
     flex-direction: column;
