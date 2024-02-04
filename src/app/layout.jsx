@@ -16,7 +16,7 @@ export async function generateMetadata() {
     description: 'some des',
     keywords: ' \sifat, rasifat, smn, portfolio, me, i, king, ras, website, portfolio website,',
     openGraph: {
-      images: `${process.env.HOST}/logo.png`,
+      images: `${process.env.HOST}/graph.png`,
     },
   }
 }
