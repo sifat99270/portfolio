@@ -2,7 +2,6 @@
 import About from "@/component/About/About";
 import styles from "./page.module.css";
 import Homes from "@/component/Home/home";
-import Skelaton from "@/component/Home/skelaton";
 import Navbar from "@/component/Navbar/Navbar";
 import { useEffect, useRef, useState } from "react";
 import Services from "@/component/Services/Services";
