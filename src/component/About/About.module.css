@@ -113,11 +113,16 @@
     flex-direction: column;
   }
   .about .aboutRight .h6 {
-    width: 70%;
-    text-align: center;
+    color: #0000007a;
+    padding: 5px;
     max-height: 150px;
     overflow: hidden;
     margin-bottom: 10px;
+    transition: 1s;
+    font-weight: bold;
+  }
+  .about .aboutRight .height {
+    max-height: 600px;
   }
 }
 @media only screen and (max-width: 750px) {

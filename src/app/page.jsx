@@ -4,11 +4,11 @@ import styles from "./page.module.css";
 import Homes from "@/component/Home/home";
 import Skelaton from "@/component/Home/skelaton";
 import Navbar from "@/component/Navbar/Navbar";
-import { Suspense, useEffect, useRef, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import Services from "@/component/Services/Services";
 import Skills from "@/component/Skills/Skills";
 import From from "@/component/Form/From";
-import Logo from "@/component/logo/logo";
+
 
 export default function Home() {
   const [send, setSend] = useState(0);
@@ -46,25 +46,23 @@ export default function Home() {
     <main style={{ marginTop: "100px" }}>
 
       <Navbar index={send} />
-      <Suspense fallback={<Skelaton />}>
-        <div id="all" >
-          <div ref={one}>
-            <Homes />
-          </div>
-          <div ref={two}>
-            <About />
-          </div>
-          <div ref={three}>
-            <Services />
-          </div>
-          <div ref={four}>
-            <Skills />
-          </div>
-          <div ref={five}>
-            <From />
-          </div>
+      <div id="all" >
+        <div ref={one}>
+          <Homes />
         </div>
-      </Suspense>
+        <div ref={two}>
+          <About />
+        </div>
+        <div ref={three}>
+          <Services />
+        </div>
+        <div ref={four}>
+          <Skills />
+        </div>
+        <div ref={five}>
+          <From />
+        </div>
+      </div>
     </main>
   );
 }
