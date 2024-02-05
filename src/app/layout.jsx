@@ -33,12 +33,12 @@ export async function generateMetadata() {
       siteName: 'smn',
       images: [
         {
-          url: 'https://agency.teamrabbil.com/files/960x0.jpg', // Must be an absolute URL
+          url: 'https://agency.teamrabbil.com/files/istockphoto-1017296544-170667a.jpg', // Must be an absolute URL
           width: 800,
           height: 600,
         },
         {
-          url: 'https://agency.teamrabbil.com/files/960x0.jpg', // Must be an absolute URL
+          url: 'https://agency.teamrabbil.com/files/istockphoto-1017296544-170667a.jpg', // Must be an absolute URL
           width: 1800,
           height: 1600,
           alt: 'My custom alt',
