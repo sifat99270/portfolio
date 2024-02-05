@@ -29,7 +29,6 @@ const Skills = () => {
                 <p className={classes.percent}>92%</p>
                 <span></span>
             </div>
-
         </section>
     );
 };

@@ -39,7 +39,7 @@ const Homes = () => {
         </div>
         <div className={classes.divide}>
           <button className={classes.btn}>Hire Me!</button>
-          <button className={classes.cv}>Download CV</button>
+          <a href="#"><button className={classes.cv}>Download CV</button></a>
         </div>
       </div>
       <div className={classes.all}>

@@ -52,7 +52,7 @@
 .skill .node::before {
   content: "";
   position: absolute;
-  width: 90%;
+  width: 80%;
   height: 100%;
   left: 0;
   background-color: var(--main-color);
@@ -80,7 +80,7 @@
 .skill .next::before {
   content: "";
   position: absolute;
-  width: 90%;
+  width: 85%;
   height: 100%;
   left: 0;
   background-color: var(--main-color);
@@ -108,7 +108,7 @@
 .skill .java::before {
   content: "";
   position: absolute;
-  width: 90%;
+  width: 92%;
   height: 100%;
   left: 0;
   background-color: var(--main-color);
@@ -121,6 +121,34 @@
   color: #0000008c;
 }
 .skill .java .percent {
+  position: absolute;
+  right: 0;
+  top: -30px;
+}
+.skill .tailwind {
+  width: 95%;
+  height: 5px;
+  position: relative;
+  background-color: rgba(0, 128, 0, 0.438);
+  border-radius: 5px;
+  margin: 40px 0 0 0;
+}
+.skill .tailwind::before {
+  content: "";
+  position: absolute;
+  width: 95%;
+  height: 100%;
+  left: 0;
+  background-color: var(--main-color);
+  border-radius: 5px;
+}
+.skill .tailwind .text {
+  position: absolute;
+  top: -30px;
+  left: 0;
+  color: #0000008c;
+}
+.skill .tailwind .percent {
   position: absolute;
   right: 0;
   top: -30px;

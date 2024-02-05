@@ -113,6 +113,9 @@
   align-items: center;
   gap: 10px;
 }
+.homeSection .my .divide a {
+  text-decoration: none;
+}
 .homeSection .my .divide .btn {
   width: 150px;
   padding: 8px;
@@ -123,7 +126,7 @@
   font-weight: bold;
   cursor: pointer;
 }
-.homeSection .my .divide .cv {
+.homeSection .my .divide a .cv {
   width: 150px;
   padding: 8px;
   border-radius: 10px;
@@ -403,7 +406,7 @@
     color: #000000;
     font-weight: bold;
   }
-  .homeSection .my .divide .cv {
+  .homeSection .my .divide a .cv {
     width: 200px;
     padding: 8px;
     border-radius: 10px;
@@ -531,7 +534,7 @@
     padding: 0;
     margin-bottom: 10px;
   }
-  .homeSection .my .divide .cv {
+  .homeSection .my .divide a .cv {
     margin-bottom: 5px;
   }
 }
