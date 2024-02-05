@@ -62,15 +62,13 @@
 }
 .serviceSection .flexs .service .read {
   width: 90%;
-  text-align: left;
   display: flex;
-
+  justify-content: center;
   max-height: 95px;
   overflow: hidden;
   transition: 0.5s;
   color: #0000007a;
   font-weight: bold;
-  text-align: center;
 }
 .serviceSection .flexs .service .btn {
   width: 100px;

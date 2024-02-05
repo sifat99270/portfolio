@@ -9,44 +9,16 @@ import { Toaster } from "react-hot-toast";
 const inter = Inter({ subsets: ["latin"] });
 
 export async function generateMetadata() {
+
+  const res = await fetch(`${process.env.HOST}/api/graph`);
+  const result = await res.json()
   return {
-    metadataBase: new URL('https://portfolio-sifat99270s-projects.vercel.app'),
-    title: "sifat",
-    description: "portfolio website this web site make by sifat",
-    keywords: [
-      "sifat",
-      "rasifat",
-      "smn",
-      "portfolio",
-      "me",
-      "i",
-      "king",
-      "ras",
-      "website",
-      "portfolio",
-      "website",
-    ],
-    openGraph: {
-      title: 'sifat',
-      description: 'portfolio',
-      url: 'https://agency.teamrabbil.com',
-      siteName: 'smn',
-      images: [
-        {
-          url: 'https://agency.teamrabbil.com/files/istockphoto-1017296544-170667a.jpg', // Must be an absolute URL
-          width: 800,
-          height: 600,
-        },
-        {
-          url: 'https://agency.teamrabbil.com/files/istockphoto-1017296544-170667a.jpg', // Must be an absolute URL
-          width: 1800,
-          height: 1600,
-          alt: 'My custom alt',
-        },
-      ],
-      locale: 'en_US',
-      type: 'website',
-    },
+    metadataBase: result['data']['metadataBase'],
+    title: result['data']['title'],
+    description: result['data']['description'],
+    keywords: result['data'][' keywords'],
+
+    openGraph: result['data']['openGraph']
   }
 }
 
