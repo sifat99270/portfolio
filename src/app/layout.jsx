@@ -11,10 +11,12 @@ const inter = Inter({ subsets: ["latin"] });
 export async function generateMetadata() {
 
   const res = await fetch(`${process.env.HOST}/api/graph`);
+  console.log(res)
   const result = await res.json()
+  console.log(result)
   if (result['status'] === 'success') {
     return {
-      metadataBase: new URL(result['data']['metadataBase']),
+      metadataBase: new URL(process.env.HOST),
       title: result['data']['title'],
       description: result['data']['description'],
       keywords: result['data'][' keywords'],
