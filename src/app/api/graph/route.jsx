@@ -20,28 +20,7 @@ export async function GET(req, res) {
             "website",
         ],
 
-        openGraph: {
-            title: 'sifat',
-            description: 'portfolio',
-            url: 'https://portfolio-sifat99270s-projects.vercel.app',
-            siteName: 'smn',
-            images: [
-                {
-                    url: 'https://portfolio-sifat99270s-projects.vercel.app/graph.png', // Must be an absolute URL
-                    width: 800,
-                    height: 600,
-                },
-                {
-                    url: 'https://portfolio-sifat99270s-projects.vercel.app/graph.png', // Must be an absolute URL
-                    width: 1800,
-                    height: 1600,
-                    alt: 'My custom alt',
-                },
-            ],
-            locale: 'en_US',
-            type: 'website',
-
-        },
+        openGraph: "https://portfolio-sifat99270s-projects.vercel.app/graph.png"
     }
     return NextResponse.json({
         status: "success", data: obj
