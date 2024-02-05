@@ -3,7 +3,7 @@ import { NextResponse } from "next/server";
 
 export async function GET(req, res) {
     const obj = {
-        metadataBase: new URL('https://portfolio-sifat99270s-projects.vercel.app'),
+        metadataBase: 'https://portfolio-sifat99270s-projects.vercel.app',
         title: "sifat",
         description: "portfolio website this web site make by sifat",
         keywords: [

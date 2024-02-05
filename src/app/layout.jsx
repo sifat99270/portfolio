@@ -12,14 +12,17 @@ export async function generateMetadata() {
 
   const res = await fetch(`${process.env.HOST}/api/graph`);
   const result = await res.json()
-  return {
-    metadataBase: result['data']['metadataBase'],
-    title: result['data']['title'],
-    description: result['data']['description'],
-    keywords: result['data'][' keywords'],
+  if (result['status'] === 'success') {
+    return {
+      metadataBase: new URL(result['data']['metadataBase']),
+      title: result['data']['title'],
+      description: result['data']['description'],
+      keywords: result['data'][' keywords'],
 
-    openGraph: result['data']['openGraph']
+      openGraph: result['data']['openGraph']
+    }
   }
+  return;
 }
 
 
