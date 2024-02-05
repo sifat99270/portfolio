@@ -17,14 +17,22 @@ export default function Home() {
   let four = useRef();
   let five = useRef()
   useEffect(() => {
-
+    const storge = localStorage.getItem('id')
+    let id = JSON.parse(storge);
+    setSend(id['id']);
   }, []);
+
+  useEffect(() => {
+    window.addEventListener('unload', () => {
+      return localStorage.setItem("id", JSON.stringify({ id: send }))
+    })
+  }, [send])
 
   useEffect(() => {
     window.addEventListener("scroll", (e) => {
       const allRef = document.getElementById('all')
       let scroll = window.scrollY;
-      let height = window.screen.height
+      let height = window.screen.height;
       allRef.childNodes.forEach((item) => {
         if (scroll + 100 > one.current.clientHeight + two.current.clientHeight + three.current.clientHeight + four.current.clientHeight) {
           setSend(4)

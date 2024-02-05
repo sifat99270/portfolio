@@ -20,7 +20,7 @@ const About = () => {
                 <p className={classes.h1}>
                     About<span className="color">Me</span>
                 </p>
-                <p className={classes.h5}>Frontend And Backend Devloper</p>
+                <p className={classes.h5}>Frontend And Backend Developer</p>
                 <p className={classes.h6} ref={readRef}>
                     I specialize in using HTML, CSS, and JavaScript to create responsive
                     and visually appealing user interfaces. I&apos;m proficient in modern

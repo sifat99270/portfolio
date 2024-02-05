@@ -12,7 +12,6 @@ const inter = Inter({ subsets: ["latin"] });
 export async function generateMetadata() {
   const res = await fetch(`${process.env.HOST}/api/graph`, { cache: "no-store" });
   const result = await res.json();
-  console.log(result)
   if (result['status'] === 'success') {
     return {
       metadataBase: new URL(process.env.HOST),
@@ -25,7 +24,6 @@ export async function generateMetadata() {
       },
     }
   }
-
   return;
 }
 
