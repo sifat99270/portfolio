@@ -29,16 +29,16 @@ export async function generateMetadata() {
     openGraph: {
       title: 'sifat',
       description: 'portfolio',
-      url: 'https://portfolio-sifat99270s-projects.vercel.app',
+      url: 'https://agency.teamrabbil.com',
       siteName: 'smn',
       images: [
         {
-          url: 'https://portfolio-sifat99270s-projects.vercel.app/graph.png', // Must be an absolute URL
+          url: 'https://agency.teamrabbil.com/files/960x0.jpg', // Must be an absolute URL
           width: 800,
           height: 600,
         },
         {
-          url: 'https://portfolio-sifat99270s-projects.vercel.app/graph.png', // Must be an absolute URL
+          url: 'https://agency.teamrabbil.com/files/960x0.jpg', // Must be an absolute URL
           width: 1800,
           height: 1600,
           alt: 'My custom alt',
