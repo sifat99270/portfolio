@@ -3,8 +3,14 @@ import { useState } from "react";
 import classes from "./Form.module.css";
 import { error, success } from "../util/toast";
 import Sent from "../util/sent";
+import { IsEmail, IsPhonenumber, IsEmpty } from "../formhandler";
 
 const From = () => {
+
+    // let a = IsPhonenumber('01421396730')
+    // let b = IsEmail("rasifat33@gmail.com")
+    // let c = IsEmpty('sifat')
+    // console.log(c);
     const [obj, setObj] = useState({
         name: "",
         email: "",
@@ -24,28 +30,41 @@ const From = () => {
     async function submit(e) {
         e.preventDefault();
         setClick(true);
-        const res = await fetch("/api/message", {
-            method: "POST",
-            headers: {
-                "content-type": "application/json",
-            },
-            body: JSON.stringify({
-                ...obj,
-                secure: true,
-            }),
-        });
-        const data = await res.json();
-        if (data["status"] === "success") {
-            setObj({
-                name: "",
-                email: "",
-                subject: "",
-                message: "",
-                mobile: "",
-            })
-            success("message sent success");
+
+        if (!IsEmpty(obj['name'])) {
+            error('please type a valid name')
+        } else if (!IsEmpty(obj['subject'])) {
+            error('please type a valid subject')
+        } else if (!IsEmpty(obj['message'])) {
+            error('please type a valid message')
+        } else if (!IsEmail(obj['email'])) {
+            error('please type a valid email')
+        } else if (!IsPhonenumber(obj['mobile'])) {
+            error('please type a valid mobile number')
         } else {
-            error("message sent fail");
+            const res = await fetch("/api/message", {
+                method: "POST",
+                headers: {
+                    "content-type": "application/json",
+                },
+                body: JSON.stringify({
+                    ...obj,
+                    secure: true,
+                }),
+            });
+            const data = await res.json();
+            if (data["status"] === "success") {
+                setObj({
+                    name: "",
+                    email: "",
+                    subject: "",
+                    message: "",
+                    mobile: "",
+                })
+                success("message sent success");
+            } else {
+                error("message sent fail");
+            }
         }
         setClick(false);
     }

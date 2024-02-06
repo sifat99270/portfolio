@@ -18,8 +18,10 @@ export default function Home() {
   let five = useRef()
   useEffect(() => {
     const storge = localStorage.getItem('id')
-    let id = JSON.parse(storge);
-    setSend(id['id']);
+    if (storge) {
+      let id = JSON.parse(storge);
+      setSend(id['id']);
+    }
   }, []);
 
   useEffect(() => {
